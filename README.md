@@ -1,2 +1,2 @@
-# coffe shop
- The site of simple coffe shop.
+# coffee shop
+ The site of simple coffee shop.
