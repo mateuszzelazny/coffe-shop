@@ -13,12 +13,22 @@ body {
             top: 0;
 
             h1 {
+                transition: ease-in-out;
+                transition-duration: 0s;
                 background: white;
                 font-family: 'Sacramento';
                 font-style: italic;
                 text-align: center;
                 padding: 15px 0;
                 box-shadow: 0px -20px 53px -6px rgba(0, 0, 0, 0.75);
+                font-size: 3rem;
+            }
+
+        }
+
+        .scrollHeader {
+            h1 {
+                font-size: 2rem;
             }
         }
 
@@ -37,33 +47,68 @@ body {
 
             .content {
                 font-family: 'Oswald', sans-serif;
-                background: white;
+                background: #eee;
                 min-height: 70vh;
+                padding: 0 20vw;
 
                 .info {
+                    max-width: 1200px;
                     display: grid;
-                    grid-template-columns: repeat(3, calc(100% / 3));
-                    grid-template-rows: repeat(3, 400px);
-                    width: auto;
+                    // grid-template-columns: repeat(2, calc(100% / 2));
+                    grid-template-rows: repeat(3, 300px);
+                    row-gap: 40px;
+                    // column-gap: 5 0px;
+                    padding: 30px 0 ;
 
-                    .infoText {
-                        display: flex;
-                        justify-content: center;
-                        align-items: center;
-                        font-size: 1.5rem;
+
+                    .infoChild {
+                        display: grid;
+                        grid-template-columns: repeat(2, 1fr);
+                        grid-template-rows: 100%;
+                        column-gap: 50px;
+                        background: white;
+                        border-radius: 1em;
+                        padding: 2em 2.5em;
+                        .infoText {
+                            width: 100%;
+                            display: flex;
+                            justify-content: center;
+                            text-align: center;
+                            align-items: center;
+                            font-size: 1.5rem;
+                        }
+    
+                        .infoPicture {
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            img {
+                                border-radius: 2px;
+                                max-height: 100%;
+                                max-width: 100%;
+                            }
+                        }
+
                     }
 
-                    .infoText1 {
-                        grid-area: 1/1/2/3;
-                    }
 
-                    .infoText2 {
-                        grid-area: 2/2/3/4;
-                    }
+                    // .infoPicture:nth-of-type(odd){
+                    //     justify-content: end;
+                    // }
 
-                    .infoText3 {
-                        grid-area: 3/1/4/3;
-                    }
+                    // .infoText1 {
+                    //     grid-area: 1/1/2/3;
+                    // }
+
+                    // .infoText2 {
+                    //     grid-area: 2/2/3/4;
+                    // }
+
+                    // .infoText3 {
+                    //     grid-area: 3/1/4/3;
+                    // }
+
+
                 }
             }
         }
