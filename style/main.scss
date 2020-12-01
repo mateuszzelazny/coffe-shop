@@ -10,6 +10,7 @@ body {
     .container {
         header {
             position: sticky;
+            top: 0;
 
             h1 {
                 background: white;
@@ -22,20 +23,48 @@ body {
         }
 
         main {
-            .banner{
-                height:500px;
+            .banner {
+                height: 30vw;
                 background: rgba(0, 0, 0, 0.6);
-                img{
-                    top:-500px;
+
+                img {
+                    top: -5vw;
                     z-index: -10;
                     position: fixed;
                     width: 100vw;
                 }
             }
+
             .content {
                 font-family: 'Oswald', sans-serif;
                 background: white;
                 min-height: 70vh;
+
+                .info {
+                    display: grid;
+                    grid-template-columns: repeat(3, calc(100% / 3));
+                    grid-template-rows: repeat(3, 400px);
+                    width: auto;
+
+                    .infoText {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        font-size: 1.5rem;
+                    }
+
+                    .infoText1 {
+                        grid-area: 1/1/2/3;
+                    }
+
+                    .infoText2 {
+                        grid-area: 2/2/3/4;
+                    }
+
+                    .infoText3 {
+                        grid-area: 3/1/4/3;
+                    }
+                }
             }
         }
     }

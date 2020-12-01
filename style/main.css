@@ -8,6 +8,7 @@
 body .container header {
   position: -webkit-sticky;
   position: sticky;
+  top: 0;
 }
 
 body .container header h1 {
@@ -21,12 +22,12 @@ body .container header h1 {
 }
 
 body .container main .banner {
-  height: 500px;
+  height: 30vw;
   background: rgba(0, 0, 0, 0.6);
 }
 
 body .container main .banner img {
-  top: -500px;
+  top: -5vw;
   z-index: -10;
   position: fixed;
   width: 100vw;
@@ -36,5 +37,52 @@ body .container main .content {
   font-family: 'Oswald', sans-serif;
   background: white;
   min-height: 70vh;
+}
+
+body .container main .content .info {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (calc(100% / 3))[3];
+      grid-template-columns: repeat(3, calc(100% / 3));
+  -ms-grid-rows: (400px)[3];
+      grid-template-rows: repeat(3, 400px);
+  width: auto;
+}
+
+body .container main .content .info .infoText {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 1.5rem;
+}
+
+body .container main .content .info .infoText1 {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: 1/1/2/3;
+}
+
+body .container main .content .info .infoText2 {
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 2;
+  grid-area: 2/2/3/4;
+}
+
+body .container main .content .info .infoText3 {
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: 3/1/4/3;
 }
 /*# sourceMappingURL=main.css.map */
