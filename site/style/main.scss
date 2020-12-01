@@ -1,20 +1,41 @@
 // @import url('https://fonts.googleapis.com/css2?family=Sacramento&display=swap');
 
-body{
-    *{
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-    }
-    .container{
-        header{
-            h1{
-                // color:red;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    .container {
+        header {
+            position: sticky;
+
+            h1 {
+                background: white;
                 font-family: 'Sacramento';
                 font-style: italic;
                 text-align: center;
                 padding: 15px 0;
-                box-shadow: 0px -20px 53px -6px rgba(0,0,0,0.75);
+                box-shadow: 0px -20px 53px -6px rgba(0, 0, 0, 0.75);
+            }
+        }
+
+        main {
+            .banner{
+                height:500px;
+                background: rgba(0, 0, 0, 0.6);
+                img{
+                    top:-500px;
+                    z-index: -10;
+                    position: fixed;
+                    width: 100vw;
+                }
+            }
+            .content {
+                font-family: 'Oswald', sans-serif;
+                background: white;
+                min-height: 70vh;
             }
         }
     }
