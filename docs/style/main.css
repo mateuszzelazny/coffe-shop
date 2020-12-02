@@ -16,7 +16,7 @@ body .container header h1 {
   transition: ease-in-out;
   -webkit-transition-duration: 0s;
           transition-duration: 0s;
-  background: white;
+  background: #b38866;
   font-family: 'Sacramento';
   font-style: italic;
   text-align: center;
@@ -28,6 +28,10 @@ body .container header h1 {
 
 body .container .scrollHeader h1 {
   font-size: 2rem;
+}
+
+body .container main {
+  font-family: 'Oswald', sans-serif;
 }
 
 body .container main .banner {
@@ -43,7 +47,6 @@ body .container main .banner img {
 }
 
 body .container main .content {
-  font-family: 'Oswald', sans-serif;
   background: #eee;
   min-height: 70vh;
 }
@@ -116,7 +119,7 @@ body .container main .content .info .infoChild .infoPicture img {
 
 body .container main .content .products {
   padding: 30px 0;
-  background: white;
+  background: #ddbb95;
 }
 
 body .container main .content .products .title {
@@ -130,10 +133,13 @@ body .container main .content .products .title:first-of-type {
 }
 
 body .container main .content .products .product {
+  background: #eee;
   padding: 2em;
   margin: 0 10vw;
   margin-top: 15px;
-  border: solid black 1px;
+  border: solid #626d71 1px;
+  -webkit-box-shadow: 0px 0px 97px -70px rgba(0, 0, 0, 0.75);
+          box-shadow: 0px 0px 97px -70px rgba(0, 0, 0, 0.75);
   border-radius: 1em;
   display: -ms-grid;
   display: grid;
@@ -163,5 +169,137 @@ body .container main .content .products .product .text .price {
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
+}
+
+body .container main .content .productsLists {
+  background: #eee;
+}
+
+body .container main .content .productsLists .productList {
+  padding: 1em;
+}
+
+body .container main .content .productsLists .productList .title {
+  font-size: 2em;
+}
+
+body .container main .content .productsLists .productList ul {
+  margin-left: 50px;
+  overflow: auto;
+  list-style-type: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 1em;
+}
+
+body .container main .content .productsLists .productList ul li {
+  background: white;
+  border-radius: 1em;
+  padding: 1px;
+  min-width: 250px;
+  max-width: 250px;
+}
+
+body .container main .content .productsLists .productList ul li .product {
+  padding: 1em;
+  height: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 200px 1fr;
+      grid-template-rows: 200px 1fr;
+  row-gap: 5px;
+  -ms-grid-columns: 100%;
+      grid-template-columns: 100%;
+}
+
+body .container main .content .productsLists .productList ul li .product .image {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+}
+
+body .container main .content .productsLists .productList ul li .product .image img {
+  max-height: 100%;
+  max-width: 100%;
+}
+
+body .container main .content .productsLists .productList ul li .product .title {
+  font-size: 1.2em;
+}
+
+body .container main .content .productsLists .productList ul li .product .price {
+  font-size: 1em;
+}
+
+body .container main .content .productsLists .productList ul li + li {
+  margin-left: 15px;
+}
+
+body .container main .content .productsLists .productList ::-webkit-scrollbar {
+  width: 0px;
+  height: 0;
+  background: transparent;
+}
+
+body .container footer {
+  font-family: 'Oswald', sans-serif;
+  background: #626d71;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 500px 1fr;
+      grid-template-columns: 1fr 500px 1fr;
+  -ms-grid-rows: 200px;
+      grid-template-rows: 200px;
+}
+
+body .container footer p {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-area: 1/2/2/3;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  margin-bottom: 5%;
+  font-size: .8em;
+}
+
+body .container footer .media {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-area: 1/2/2/3;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  margin-top: 5%;
+  font-size: 1.2em;
 }
 /*# sourceMappingURL=main.css.map */

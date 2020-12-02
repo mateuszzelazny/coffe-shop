@@ -1,5 +1,9 @@
 // @import url('https://fonts.googleapis.com/css2?family=Sacramento&display=swap');
-
+$yellow:#ddbb95;
+$lightGray:#eee;
+$darkGray:#626d71;
+$brown:#b38866;
+$gray:#cdcec0;
 * {
     margin: 0;
     padding: 0;
@@ -15,7 +19,7 @@ body {
             h1 {
                 transition: ease-in-out;
                 transition-duration: 0s;
-                background: white;
+                background:$brown;
                 font-family: 'Sacramento';
                 font-style: italic;
                 text-align: center;
@@ -33,6 +37,8 @@ body {
         }
 
         main {
+            font-family: 'Oswald', sans-serif;
+
             .banner {
                 height: 30vw;
                 background: rgba(0, 0, 0, 0.6);
@@ -46,8 +52,7 @@ body {
             }
 
             .content {
-                font-family: 'Oswald', sans-serif;
-                background: #eee;
+                background: $lightGray;
                 min-height: 70vh;
 
                 .info {
@@ -99,7 +104,7 @@ body {
 
                 .products {
                     padding: 30px 0;
-                    background: white;
+                    background: $yellow;
                     .title {
                         font-size: 2em;
                         text-align: center;
@@ -111,10 +116,12 @@ body {
                     }
 
                     .product {
+                        background: $lightGray;
                         padding:2em;
                         margin:0 10vw;
                         margin-top:15px;
-                        border: solid black 1px;
+                        border: solid $darkGray 1px;    
+                        box-shadow: 0px 0px 97px -70px rgba(0,0,0,0.75);
                         border-radius: 1em;
                         display: grid;
                         grid-template-columns: repeat(2,1fr);
@@ -140,6 +147,91 @@ body {
                         }
                     }
                 }
+                .productsLists{
+                    background: $lightGray;
+
+                    .productList{
+                        padding:1em;
+                        .title{
+                            font-size: 2em;
+                        }
+                        ul{
+                            margin-left:50px;
+                            overflow: auto;
+                            list-style-type: none;
+                            // overflow-x: hidden;
+                            display:flex;
+                            flex-direction: row;
+                            align-items: center;
+                            border-radius: 1em;
+
+                            li{
+                                background: white;
+                                border-radius: 1em;
+                                padding: 1px;
+                                // width:250px;
+                                min-width: 250px;
+                                max-width: 250px;
+                                .product{
+                                    padding: 1em;
+                                    height:100%;
+                                    display: grid;
+                                    grid-template-rows: 200px 1fr;
+                                    row-gap: 5px;
+                                    grid-template-columns: 100%;
+                                    .image{
+                                        display: flex;
+                                        align-items: center;
+                                        justify-content: center;
+                                        width:100%;
+                                        img{
+                                            max-height:100%;
+                                            max-width: 100%;
+                                        }
+                                    }
+                                    .title{
+                                        font-size: 1.2em;
+                                    }
+                                    .price{
+                                        font-size:1em;
+                                    }
+                                }
+                            }
+                            li+li{
+                                margin-left: 15px;
+                            }
+                        }
+                        ::-webkit-scrollbar {
+                            width: 0px;
+                            height: 0;
+                            background: transparent;
+                        }
+                    }
+                }
+            }
+        }
+        footer{
+            font-family: 'Oswald', sans-serif;
+
+            background: $darkGray;
+            display: grid;
+            grid-template-columns: 1fr 500px 1fr;
+            grid-template-rows:200px;
+            p{
+                grid-area: 1/2/2/3;
+                display: flex;
+                justify-content: center;
+                align-items:flex-end;
+                margin-bottom: 5%;
+                font-size: .8em;
+            }
+            .media{
+                grid-area: 1/2/2/3;
+                display: flex;
+                justify-content: center;
+                text-align: center;
+                margin-top: 5%;
+                font-size: 1.2em;
             }
         }
     }
