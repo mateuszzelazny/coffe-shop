@@ -26,6 +26,11 @@ body .container header h1 {
   font-size: 3rem;
 }
 
+body .container header h1 a {
+  text-decoration: none;
+  color: black;
+}
+
 body .container .scrollHeader h1 {
   font-size: 2rem;
 }
@@ -166,9 +171,22 @@ body .container main .content .products .product .text .title {
 }
 
 body .container main .content .products .product .text .price {
+  justify-self: flex-start;
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
+}
+
+body .container main .content .products .product .picture {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 body .container main .content .productsLists {
@@ -209,6 +227,8 @@ body .container main .content .productsLists .productList ul li {
 }
 
 body .container main .content .productsLists .productList ul li .product {
+  text-decoration: none;
+  color: black;
   padding: 1em;
   height: 100%;
   display: -ms-grid;

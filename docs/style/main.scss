@@ -26,6 +26,10 @@ body {
                 padding: 15px 0;
                 box-shadow: 0px -20px 53px -6px rgba(0, 0, 0, 0.75);
                 font-size: 3rem;
+                a{
+                    text-decoration: none;
+                    color:black;
+                }
             }
 
         }
@@ -135,15 +139,18 @@ body {
                                 margin-bottom: 10px;
                             }
                             .price{
-                                // justify-self: end;
+                                justify-self: flex-start;
                                 align-self: center;
                             }
                         }
                         .picture {
-                            img{
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            // img{
 
-                                // border-radius: 2em;
-                            }
+                            //     // border-radius: 2em;
+                            // }
                         }
                     }
                 }
@@ -173,6 +180,8 @@ body {
                                 min-width: 250px;
                                 max-width: 250px;
                                 .product{
+                                    text-decoration: none;
+                                    color:black;
                                     padding: 1em;
                                     height:100%;
                                     display: grid;

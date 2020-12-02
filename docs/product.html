@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coffee Shop</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Sacramento&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style/main.css">
+    <link rel="stylesheet" href="style/product.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1><a href="index.html">
+
+            Coffe Shop</a></h1>
+        </header>
+        <main id="app2">
+            <div class="product">
+                <div class="image">
+                    <img :src="regions[coffees[currentCoffee()-1].region-1].picture" alt="">
+                </div>
+                <div class="text">
+                    <div class="title">
+                        {{coffees[currentCoffee()-1].name}}
+                    </div>
+                    <div class="description">
+                        {{coffees[currentCoffee()-1].description}}
+
+                    </div>
+                    <div class="price">
+                        {{coffees[currentCoffee()-1].price}}
+
+                    </div>
+                </div>
+            </div>
+        </main>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+<script src="js/data.js"></script>
+<script src="js/vue2.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

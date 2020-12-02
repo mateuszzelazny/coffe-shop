@@ -26,13 +26,12 @@ document.addEventListener('scroll',(event,delta)=>{
     }
 });
 
-i=0;
-string=``;
-document.querySelectorAll(".productList").forEach((list)=>{
-    console.log("region"+i)
-    list.querySelectorAll(".product").forEach((product)=>{
-        string+=`{\nname:"${product.querySelector(".title").innerHTML.replace('\n','').trim()}",\nprice:"${product.querySelector(".price").innerHTML.replace('\n','').trim()}",\nregion:${i}\n},`;
-    })
-    i++;
-})
-console.log(string)
+    // i=0;
+    // string=``;
+    //     console.log("region"+i)
+    //     list.querySelectorAll(".product").forEach((product)=>{
+    //         string+=`{\nname:"${product.querySelector(".title").innerHTML.replace('\n','').trim()}",\nprice:"${product.querySelector(".price").innerHTML.replace('\n','').trim()}",\nregion:${i}\n},`;
+    //     })
+    //     i++;
+    // })
+    // console.log(string)

@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Coffe Shop</title>
+    <title>Coffee Shop</title>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Sacramento&display=swap" rel="stylesheet">
@@ -14,7 +14,9 @@
 <body>
     <div class="container">
         <header>
-            <h1>Coffe Shop</h1>
+            <h1><a href="index.html">
+
+            Coffe Shop</a></h1>
         </header>
         <main>
             <div class="banner">
@@ -68,36 +70,40 @@
                     </div>
                     <div class="bestProduct product">
                         <div class="picture">
-                            <img src="assets/img/productSample.jpg" alt="">
+                            <img v-bind:src="regions[coffees[bestCoffee()].region-1].picture" alt="">
                         </div>
                         <div class="text">
                             <div class="title">
-                                Kopi Luwak
+                                {{coffees[bestCoffee()].name}}
                             </div>
                             <div class="description">
-                                Bardzo aromatyczne ziarna i niezwykły proces produkcyjny. Te rzeczy wyróżniają tę kawę spośród innych. Pochodzi ona z wyspy Java należącej do Indonezji, na której żyją niewielkie zwierzęta zwane Luwakami, które mają wrodzoną zdolność znajdywania najdojrzalszych kiści kawowca. Podczas trawienia z ziaren dzięki enzymom wytrąca się białko co powoduje brak goryczy podczas wypalania ziaren. Właśnie dzięki temu unikatowemu sposobowi obróbki ta kawa zyskała taką popularność.
+                                {{coffees[bestCoffee()].description}}
+
                             </div>
                             <div class="price">
-                                100g - 120zł
+                                {{coffees[bestCoffee()].price}}
+
                             </div>
                         </div>
                     </div>
                     <div class="title">
                         Wybór klientów
                     </div>
-                    <div class="topProduct product">
+                    <div class="bestProduct product">
                         <div class="picture">
-                            <img src="assets/img/productSample.jpg" alt="">
+                            <img v-bind:src="regions[coffees[recentCoffee()-1].region-1].picture" alt="">
                         </div>
                         <div class="text">
                             <div class="title">
-                                Amaretto
+                                {{coffees[recentCoffee()-1].name}}
                             </div>
                             <div class="description">
-                                Nasi klienci uwielbiają kupować tę kawę ze względu na jej stosunek jakości do ceny, nie mówiąc już o tym że jest ona nasycona smakiem likieru Amaretto co daje niespotykaną kompozycję smaków. 
+                                {{coffees[recentCoffee()-1].description}}
+
                             </div>
                             <div class="price">
-                                100g - 19,90zł
+                                {{coffees[recentCoffee()-1].price}}
+
                             </div>
                         </div>
                     </div>
@@ -109,7 +115,7 @@
                         </div>
                         <ul >
                             <li v-for="coffee in coffees" v-if="coffee.region == region.id">
-                                <div class="product">
+                                <a v-bind:href="'product.html?product='+coffee.id" class="product">
                                     <div class="image">
                                         <img :src="region.picture">
                                     </div>
@@ -121,7 +127,7 @@
                                             {{coffee.price}}
                                         </div>
                                     </div>
-                                </div>
+                                </a>
                             </li>
                         </ul>
                     </div>
@@ -137,6 +143,7 @@
     </div>
 </body>
 <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+<script src="js/data.js"></script>
 <script src="js/vue.js"></script>
 <script src="js/main.js"></script>
 </html>
