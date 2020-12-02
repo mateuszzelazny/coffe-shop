@@ -46,7 +46,6 @@ body .container main .content {
   font-family: 'Oswald', sans-serif;
   background: #eee;
   min-height: 70vh;
-  padding: 0 20vw;
 }
 
 body .container main .content .info {
@@ -57,6 +56,7 @@ body .container main .content .info {
       grid-template-rows: repeat(3, 300px);
   row-gap: 40px;
   padding: 30px 0;
+  margin: 0 20vw;
 }
 
 body .container main .content .info .infoChild {
@@ -112,5 +112,56 @@ body .container main .content .info .infoChild .infoPicture img {
   border-radius: 2px;
   max-height: 100%;
   max-width: 100%;
+}
+
+body .container main .content .products {
+  padding: 30px 0;
+  background: white;
+}
+
+body .container main .content .products .title {
+  font-size: 2em;
+  text-align: center;
+  margin-top: 40px;
+}
+
+body .container main .content .products .title:first-of-type {
+  margin-top: 0;
+}
+
+body .container main .content .products .product {
+  padding: 2em;
+  margin: 0 10vw;
+  margin-top: 15px;
+  border: solid black 1px;
+  border-radius: 1em;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  -webkit-column-gap: 15px;
+          column-gap: 15px;
+}
+
+body .container main .content .products .product .text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+body .container main .content .products .product .text .title {
+  font-size: 1.7em;
+  margin-bottom: 10px;
+}
+
+body .container main .content .products .product .text .price {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
 }
 /*# sourceMappingURL=main.css.map */

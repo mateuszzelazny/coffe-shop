@@ -49,7 +49,6 @@ body {
                 font-family: 'Oswald', sans-serif;
                 background: #eee;
                 min-height: 70vh;
-                padding: 0 20vw;
 
                 .info {
                     max-width: 1200px;
@@ -57,6 +56,7 @@ body {
                     grid-template-rows: repeat(3, 300px);
                     row-gap: 40px;
                     padding: 30px 0;
+                    margin: 0 20vw;
 
 
                     .infoChild {
@@ -75,9 +75,10 @@ body {
                             text-align: center;
                             align-items: center;
                             flex-direction: column;
-                            .title{
+
+                            .title {
                                 font-size: 1.5rem;
-                                margin-bottom: 10px ;
+                                margin-bottom: 10px;
                             }
                         }
 
@@ -93,6 +94,50 @@ body {
                             }
                         }
 
+                    }
+                }
+
+                .products {
+                    padding: 30px 0;
+                    background: white;
+                    .title {
+                        font-size: 2em;
+                        text-align: center;
+                        margin-top: 40px;
+                    }
+                    .title:first-of-type{
+                        margin-top: 0;
+
+                    }
+
+                    .product {
+                        padding:2em;
+                        margin:0 10vw;
+                        margin-top:15px;
+                        border: solid black 1px;
+                        border-radius: 1em;
+                        display: grid;
+                        grid-template-columns: repeat(2,1fr);
+                        column-gap: 15px;
+                        .text{
+                            display:flex;
+                            flex-wrap: wrap;
+                            align-items: flex-start;
+                            .title{
+                                font-size: 1.7em;
+                                margin-bottom: 10px;
+                            }
+                            .price{
+                                // justify-self: end;
+                                align-self: center;
+                            }
+                        }
+                        .picture {
+                            img{
+
+                                // border-radius: 2em;
+                            }
+                        }
                     }
                 }
             }
