@@ -54,11 +54,9 @@ body {
                 .info {
                     max-width: 1200px;
                     display: grid;
-                    // grid-template-columns: repeat(2, calc(100% / 2));
                     grid-template-rows: repeat(3, 300px);
                     row-gap: 40px;
-                    // column-gap: 5 0px;
-                    padding: 30px 0 ;
+                    padding: 30px 0;
 
 
                     .infoChild {
@@ -69,6 +67,7 @@ body {
                         background: white;
                         border-radius: 1em;
                         padding: 2em 2.5em;
+
                         .infoText {
                             width: 100%;
                             display: flex;
@@ -77,11 +76,12 @@ body {
                             align-items: center;
                             font-size: 1.5rem;
                         }
-    
+
                         .infoPicture {
                             display: flex;
                             justify-content: center;
                             align-items: center;
+
                             img {
                                 border-radius: 2px;
                                 max-height: 100%;
@@ -90,25 +90,6 @@ body {
                         }
 
                     }
-
-
-                    // .infoPicture:nth-of-type(odd){
-                    //     justify-content: end;
-                    // }
-
-                    // .infoText1 {
-                    //     grid-area: 1/1/2/3;
-                    // }
-
-                    // .infoText2 {
-                    //     grid-area: 2/2/3/4;
-                    // }
-
-                    // .infoText3 {
-                    //     grid-area: 3/1/4/3;
-                    // }
-
-
                 }
             }
         }
