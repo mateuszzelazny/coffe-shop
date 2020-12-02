@@ -6,7 +6,7 @@ lists.forEach((element)=>{
         if(!(element.scrollLeft+element.clientWidth == element.scrollWidth && delta<0)^(element.scrollLeft == 0 && delta>0))
         {
             // console.log('l')
-            element.scrollLeft-=delta*30;
+            element.scrollLeft-=delta*60;
             e.preventDefault();
         }
     })
@@ -25,3 +25,14 @@ document.addEventListener('scroll',(event,delta)=>{
         }
     }
 });
+
+i=0;
+string=``;
+document.querySelectorAll(".productList").forEach((list)=>{
+    console.log("region"+i)
+    list.querySelectorAll(".product").forEach((product)=>{
+        string+=`{\nname:"${product.querySelector(".title").innerHTML.replace('\n','').trim()}",\nprice:"${product.querySelector(".price").innerHTML.replace('\n','').trim()}",\nregion:${i}\n},`;
+    })
+    i++;
+})
+console.log(string)
