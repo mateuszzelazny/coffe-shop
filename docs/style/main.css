@@ -12,23 +12,23 @@ body .container header {
 }
 
 body .container header h1 {
+  padding: 15px 0;
+  font-size: 3rem;
+  background: #b38866;
+  text-align: center;
+  font-style: italic;
+  font-family: 'Sacramento';
+  -webkit-box-shadow: 0px -20px 53px -6px rgba(0, 0, 0, 0.75);
+          box-shadow: 0px -20px 53px -6px rgba(0, 0, 0, 0.75);
   -webkit-transition: ease-in-out;
   transition: ease-in-out;
   -webkit-transition-duration: 0s;
           transition-duration: 0s;
-  background: #b38866;
-  font-family: 'Sacramento';
-  font-style: italic;
-  text-align: center;
-  padding: 15px 0;
-  -webkit-box-shadow: 0px -20px 53px -6px rgba(0, 0, 0, 0.75);
-          box-shadow: 0px -20px 53px -6px rgba(0, 0, 0, 0.75);
-  font-size: 3rem;
 }
 
 body .container header h1 a {
-  text-decoration: none;
   color: black;
+  text-decoration: none;
 }
 
 body .container .scrollHeader h1 {
@@ -45,10 +45,10 @@ body .container main .banner {
 }
 
 body .container main .banner img {
-  top: -5vw;
-  z-index: -10;
   position: fixed;
+  top: -5vw;
   width: 100vw;
+  z-index: -10;
 }
 
 body .container main .content {
@@ -57,17 +57,20 @@ body .container main .content {
 }
 
 body .container main .content .info {
+  margin: 0 20vw;
+  padding: 30px 0;
   max-width: 1200px;
   display: -ms-grid;
   display: grid;
   -ms-grid-rows: (300px)[3];
       grid-template-rows: repeat(3, 300px);
   row-gap: 40px;
-  padding: 30px 0;
-  margin: 0 20vw;
 }
 
 body .container main .content .info .infoChild {
+  padding: 2em 2.5em;
+  border-radius: 1em;
+  background: white;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (1fr)[2];
@@ -76,20 +79,17 @@ body .container main .content .info .infoChild {
       grid-template-rows: 100%;
   -webkit-column-gap: 50px;
           column-gap: 50px;
-  background: white;
-  border-radius: 1em;
-  padding: 2em 2.5em;
 }
 
 body .container main .content .info .infoChild .infoText {
   width: 100%;
+  text-align: center;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  text-align: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -100,8 +100,8 @@ body .container main .content .info .infoChild .infoText {
 }
 
 body .container main .content .info .infoChild .infoText .title {
-  font-size: 1.5rem;
   margin-bottom: 10px;
+  font-size: 1.5rem;
 }
 
 body .container main .content .info .infoChild .infoPicture {
@@ -128,9 +128,9 @@ body .container main .content .products {
 }
 
 body .container main .content .products .title {
+  margin-top: 40px;
   font-size: 2em;
   text-align: center;
-  margin-top: 40px;
 }
 
 body .container main .content .products .title:first-of-type {
@@ -138,14 +138,14 @@ body .container main .content .products .title:first-of-type {
 }
 
 body .container main .content .products .product {
-  background: #eee;
   padding: 2em;
   margin: 0 10vw;
   margin-top: 15px;
+  background: #eee;
+  border-radius: 1em;
   border: solid #626d71 1px;
   -webkit-box-shadow: 0px 0px 97px -70px rgba(0, 0, 0, 0.75);
           box-shadow: 0px 0px 97px -70px rgba(0, 0, 0, 0.75);
-  border-radius: 1em;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (1fr)[2];

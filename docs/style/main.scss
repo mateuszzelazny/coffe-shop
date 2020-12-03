@@ -17,18 +17,18 @@ body {
             top: 0;
 
             h1 {
+                padding: 15px 0;
+                font-size: 3rem;
+                background:$brown;
+                text-align: center;
+                font-style: italic;
+                font-family: 'Sacramento';
+                box-shadow: 0px -20px 53px -6px rgba(0, 0, 0, 0.75);
                 transition: ease-in-out;
                 transition-duration: 0s;
-                background:$brown;
-                font-family: 'Sacramento';
-                font-style: italic;
-                text-align: center;
-                padding: 15px 0;
-                box-shadow: 0px -20px 53px -6px rgba(0, 0, 0, 0.75);
-                font-size: 3rem;
                 a{
-                    text-decoration: none;
                     color:black;
+                    text-decoration: none;
                 }
             }
 
@@ -48,10 +48,10 @@ body {
                 background: rgba(0, 0, 0, 0.6);
 
                 img {
-                    top: -5vw;
-                    z-index: -10;
                     position: fixed;
+                    top: -5vw;
                     width: 100vw;
+                    z-index: -10;
                 }
             }
 
@@ -60,34 +60,34 @@ body {
                 min-height: 70vh;
 
                 .info {
+                    margin: 0 20vw;
+                    padding: 30px 0;
                     max-width: 1200px;
                     display: grid;
                     grid-template-rows: repeat(3, 300px);
                     row-gap: 40px;
-                    padding: 30px 0;
-                    margin: 0 20vw;
 
 
                     .infoChild {
+                        padding: 2em 2.5em;
+                        border-radius: 1em;
+                        background: white;
                         display: grid;
                         grid-template-columns: repeat(2, 1fr);
                         grid-template-rows: 100%;
                         column-gap: 50px;
-                        background: white;
-                        border-radius: 1em;
-                        padding: 2em 2.5em;
 
                         .infoText {
                             width: 100%;
+                            text-align: center;
                             display: flex;
                             justify-content: center;
-                            text-align: center;
                             align-items: center;
                             flex-direction: column;
 
                             .title {
-                                font-size: 1.5rem;
                                 margin-bottom: 10px;
+                                font-size: 1.5rem;
                             }
                         }
 
@@ -110,9 +110,9 @@ body {
                     padding: 30px 0;
                     background: $yellow;
                     .title {
+                        margin-top: 40px;
                         font-size: 2em;
                         text-align: center;
-                        margin-top: 40px;
                     }
                     .title:first-of-type{
                         margin-top: 0;
@@ -120,13 +120,13 @@ body {
                     }
 
                     .product {
-                        background: $lightGray;
                         padding:2em;
                         margin:0 10vw;
                         margin-top:15px;
+                        background: $lightGray;
+                        border-radius: 1em;
                         border: solid $darkGray 1px;    
                         box-shadow: 0px 0px 97px -70px rgba(0,0,0,0.75);
-                        border-radius: 1em;
                         display: grid;
                         grid-template-columns: repeat(2,1fr);
                         column-gap: 15px;
@@ -147,10 +147,6 @@ body {
                             display: flex;
                             justify-content: center;
                             align-items: center;
-                            // img{
-
-                            //     // border-radius: 2em;
-                            // }
                         }
                     }
                 }
@@ -166,7 +162,6 @@ body {
                             margin-left:50px;
                             overflow: auto;
                             list-style-type: none;
-                            // overflow-x: hidden;
                             display:flex;
                             flex-direction: row;
                             align-items: center;
@@ -176,7 +171,6 @@ body {
                                 background: white;
                                 border-radius: 1em;
                                 padding: 1px;
-                                // width:250px;
                                 min-width: 250px;
                                 max-width: 250px;
                                 .product{
