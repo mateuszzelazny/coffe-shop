@@ -12,11 +12,11 @@ $gray:#cdcec0;
 
 body {
     .container {
-        header {
+        .header {
             position: sticky;
             top: 0;
 
-            h1 {
+            .header__title {
                 padding: 15px 0;
                 font-size: 3rem;
                 background:$brown;
@@ -26,7 +26,7 @@ body {
                 box-shadow: 0px -20px 53px -6px rgba(0, 0, 0, 0.75);
                 transition: ease-in-out;
                 transition-duration: 0s;
-                a{
+                .header__link{
                     color:black;
                     text-decoration: none;
                 }
@@ -35,19 +35,19 @@ body {
         }
 
         .scrollHeader {
-            h1 {
+            .header__title {
                 font-size: 2rem;
             }
         }
 
-        main {
+        .main {
             font-family: 'Oswald', sans-serif;
 
             .banner {
                 height: 30vw;
                 background: rgba(0, 0, 0, 0.6);
 
-                img {
+                .banner_image {
                     position: fixed;
                     top: -5vw;
                     width: 100vw;
@@ -59,7 +59,7 @@ body {
                 background: $lightGray;
                 min-height: 70vh;
 
-                .info {
+                .content__info {
                     margin: 0 20vw;
                     padding: 30px 0;
                     max-width: 1200px;
@@ -68,7 +68,7 @@ body {
                     row-gap: 40px;
 
 
-                    .infoChild {
+                    .info__child {
                         padding: 2em 2.5em;
                         border-radius: 1em;
                         background: white;
@@ -77,7 +77,7 @@ body {
                         grid-template-rows: 100%;
                         column-gap: 50px;
 
-                        .infoText {
+                        .info__text {
                             width: 100%;
                             text-align: center;
                             display: flex;
@@ -85,13 +85,13 @@ body {
                             align-items: center;
                             flex-direction: column;
 
-                            .title {
+                            .info__title {
                                 margin-bottom: 10px;
                                 font-size: 1.5rem;
                             }
                         }
 
-                        .infoPicture {
+                        .info__picture {
                             display: flex;
                             justify-content: center;
                             align-items: center;
@@ -109,17 +109,17 @@ body {
                 .products {
                     padding: 30px 0;
                     background: $yellow;
-                    .title {
+                    .products__title {
                         margin-top: 40px;
                         font-size: 2em;
                         text-align: center;
                     }
-                    .title:first-of-type{
+                    .products__title:first-of-type{
                         margin-top: 0;
 
                     }
 
-                    .product {
+                    .products__product {
                         padding:2em;
                         margin:0 10vw;
                         margin-top:15px;
@@ -130,20 +130,20 @@ body {
                         display: grid;
                         grid-template-columns: repeat(2,1fr);
                         column-gap: 15px;
-                        .text{
+                        .product__text{
                             display:flex;
                             flex-wrap: wrap;
                             align-items: flex-start;
-                            .title{
+                            .product__title{
                                 font-size: 1.7em;
                                 margin-bottom: 10px;
                             }
-                            .price{
+                            .product__price{
                                 justify-self: flex-start;
                                 align-self: center;
                             }
                         }
-                        .picture {
+                        .product__picture {
                             display: flex;
                             justify-content: center;
                             align-items: center;
@@ -153,12 +153,12 @@ body {
                 .productsLists{
                     background: $lightGray;
 
-                    .productList{
+                    .productsLists__productList{
                         padding:1em;
-                        .title{
+                        .productList__title{
                             font-size: 2em;
                         }
-                        ul{
+                        .productList__list{
                             margin-left:50px;
                             overflow: auto;
                             list-style-type: none;
@@ -167,13 +167,13 @@ body {
                             align-items: center;
                             border-radius: 1em;
 
-                            li{
+                            .list_product{
                                 background: white;
                                 border-radius: 1em;
                                 padding: 1px;
                                 min-width: 250px;
                                 max-width: 250px;
-                                .product{
+                                .product__content{
                                     text-decoration: none;
                                     color:black;
                                     padding: 1em;
@@ -182,7 +182,7 @@ body {
                                     grid-template-rows: 200px 1fr;
                                     row-gap: 5px;
                                     grid-template-columns: 100%;
-                                    .image{
+                                    .product__image{
                                         display: flex;
                                         align-items: center;
                                         justify-content: center;
@@ -192,15 +192,15 @@ body {
                                             max-width: 100%;
                                         }
                                     }
-                                    .title{
+                                    .product__title{
                                         font-size: 1.2em;
                                     }
-                                    .price{
+                                    .product__price{
                                         font-size:1em;
                                     }
                                 }
                             }
-                            li+li{
+                            .list_product+.list_product{
                                 margin-left: 15px;
                             }
                         }
@@ -213,14 +213,14 @@ body {
                 }
             }
         }
-        footer{
+        .footer{
             font-family: 'Oswald', sans-serif;
 
             background: $darkGray;
             display: grid;
             grid-template-columns: 1fr 500px 1fr;
             grid-template-rows:200px;
-            p{
+            .footer_content{
                 grid-area: 1/2/2/3;
                 display: flex;
                 justify-content: center;
@@ -228,7 +228,7 @@ body {
                 margin-bottom: 5%;
                 font-size: .8em;
             }
-            .media{
+            .footer__media{
                 grid-area: 1/2/2/3;
                 display: flex;
                 justify-content: center;

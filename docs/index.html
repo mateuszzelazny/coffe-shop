@@ -13,95 +13,95 @@
 
 <body>
     <div class="container">
-        <header>
-            <h1><a href="index.html">
+        <header class="header">
+            <h1 class="header__title"><a class="header__link" href="index.html">
 
             Coffe Shop</a></h1>
         </header>
-        <main>
+        <main class="main">
             <div class="banner">
-                <img src="assets/img/coffeBanner.jpg" alt="">
+                <img class="banner_image" src="assets/img/coffeBanner.jpg" alt="">
             </div>
             <div class="content" id="app">
-                <div class="info">
-                    <div class="infoChild1   infoChild">
-                        <div class=" infoText">
-                            <span class="title">
+                <div class="content__info">
+                    <div class="info__child1   info__child">
+                        <div class="info__text">
+                            <span class="info__title">
                                 Najlepsza kawa na śląsku
                             </span>
-                            <span class="description">
+                            <span class="info__description">
                                 Mamy najlepszej jakości ziarna w całym województwie, wiele osób poleca nasze usługi ze
                                 względu na jakość i smak naszej kawy.
                             </span>
                         </div>
-                        <div class=" infoPicture"> <img src="assets/img/coffe2.jpg" alt=""></div>
+                        <div class=" info__picture"> <img src="assets/img/coffe2.jpg" alt=""></div>
 
                     </div>
-                    <div class="infoChild2 infoChild">
-                        <div class=" infoPicture"><img src="assets/img/coffe1.jpg" alt=""></div>
-                        <div class=" infoText">
-                            <span class="title">
+                    <div class="info__child2 info__child">
+                        <div class=" info__picture"><img src="assets/img/coffe1.jpg" alt=""></div>
+                        <div class=" info__text">
+                            <span class="info__title">
                                 Profesjonalne podejście
                             </span>
-                            <span class="description">
+                            <span class="info__description">
                                 Nasza załoga składa się z wyspecjalizowanych pracowników którzy ciągle udają się na
                                 kursy aby doprowadzić klientom najlepszej jakości ziarna.
                             </span>
                         </div>
 
                     </div>
-                    <div class="infoChild3 infoChild">
-                        <div class=" infoText">
-                            <span class="title">
+                    <div class="info__child3 info__child">
+                        <div class=" info__text">
+                            <span class="info__title">
                                 Kawa z każdego rejonu
                             </span>
-                            <span class="description">
+                            <span class="info__description">
                                 Sprowadzamy ziarna kawy z każdego kontynentu od zaufanych producentów by nasi klienci
                                 mogli spróbować każdego rodzaju kawy.
                             </span>
                         </div>
-                        <div class=" infoPicture"><img src="assets/img/map.jpg" alt=""></div>
+                        <div class=" info__picture"><img src="assets/img/map.jpg" alt=""></div>
 
                     </div>
                 </div>
                 <div class="products">
-                    <div class="title">
+                    <div class="products__title">
                         Nasza najlepsza kawa
                     </div>
-                    <div class="bestProduct product">
-                        <div class="picture">
+                    <div class="products__bestProduct products__product">
+                        <div class="product__picture">
                             <img v-bind:src="regions[coffees[bestCoffee()].region-1].picture" alt="">
                         </div>
-                        <div class="text">
-                            <div class="title">
+                        <div class="product__text">
+                            <div class="product__title">
                                 {{coffees[bestCoffee()].name}}
                             </div>
-                            <div class="description">
-                                {{coffees[bestCoffee()].description}}
+                            <div class="product__description">
+                                {{coffees[bestCoffee()].info__description}}
 
                             </div>
-                            <div class="price">
+                            <div class="product__price">
                                 {{coffees[bestCoffee()].price}}
 
                             </div>
                         </div>
                     </div>
-                    <div class="title">
+                    <div class="products__title">
                         Wybór klientów
                     </div>
-                    <div class="bestProduct product">
-                        <div class="picture">
+                    <div class="products__bestProduct products__product">
+                        <div class="product__picture">
                             <img v-bind:src="regions[coffees[recentCoffee()-1].region-1].picture" alt="">
                         </div>
-                        <div class="text">
-                            <div class="title">
+                        <div class="product__text">
+                            <div class="product__title">
                                 {{coffees[recentCoffee()-1].name}}
                             </div>
-                            <div class="description">
-                                {{coffees[recentCoffee()-1].description}}
+                            <div class="product__description">
+                                {{coffees[recentCoffee()-1].info__description}}
 
                             </div>
-                            <div class="price">
+                            <div class="product__price">
                                 {{coffees[recentCoffee()-1].price}}
 
                             </div>
@@ -109,21 +109,21 @@
                     </div>
                 </div>
                 <div class="productsLists">
-                    <div class="productList" v-for="region in regions">
-                        <div class="title">
+                    <div class="productsLists__productList" v-for="region in regions">
+                        <div class="productList__title">
                             Kawy z {{region.display}}
                         </div>
-                        <ul >
-                            <li v-for="coffee in coffees" v-if="coffee.region == region.id">
-                                <a v-bind:href="'product.html?product='+coffee.id" class="product">
-                                    <div class="image">
+                        <ul class="productList__list">
+                            <li v-for="coffee in coffees" v-if="coffee.region == region.id" class="list_product">
+                                <a v-bind:href="'product.html?product='+coffee.id" class="product__content">
+                                    <div class="product__image">
                                         <img :src="region.picture">
                                     </div>
-                                    <div class="text">
-                                        <div class="title">
+                                    <div class="product__text">
+                                        <div class="product__title">
                                             {{coffee.name}}
                                         </div>
-                                        <div class="price">
+                                        <div class="product__price">
                                             {{coffee.price}}
                                         </div>
                                     </div>
@@ -134,9 +134,9 @@
                 </div>
             </div>
         </main>
-        <footer>
-            <p>&copy; Mateusz Żelazny 2020</p>
-            <div class="media">
+        <footer class="footer">
+            <p class="footer_content">&copy; Mateusz Żelazny 2020</p>
+            <div class="footer__media">
                 znajdź nas na:<br> facebook<br> instagram <br> twitter
             </div>
         </footer>

@@ -5,13 +5,13 @@
 }
 body{
     .container{
-        main{
-            .product{
+        .main{
+            .main__product{
                 display: grid;
                 grid-template-columns: 30% 70%;
                 grid-template-rows: 400px;
                 column-gap: 20px;
-                .image{
+                .product__image{
                     display: flex;
                     justify-content: center;
                     align-items: center;
@@ -20,16 +20,16 @@ body{
                         max-height: 100%;
                     }
                 }
-                .text{
+                .product__text{
                     padding: 2em 1em;
                     max-width: 100%;
-                    .title{
+                    .product__title{
                         font-size: 2.2em;
                     }
-                    .description{
+                    .product__description{
                         margin-top: 20px;
                     }
-                    .price{
+                    .product__price{
                         margin-top: 50px;
                     }
                 }

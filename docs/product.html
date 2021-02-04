@@ -12,25 +12,25 @@
 </head>
 <body>
     <div class="container">
-        <header>
-            <h1><a href="index.html">
+        <header class="header">
+            <h1 class="header__title"><a class="header__link" href="index.html">
 
             Coffe Shop</a></h1>
         </header>
-        <main id="app2">
-            <div class="product">
-                <div class="image">
+        <main class="main"id="app2">
+            <div class="main__product">
+                <div class="product__image">
                     <img :src="regions[coffees[currentCoffee()-1].region-1].picture" alt="">
                 </div>
-                <div class="text">
-                    <div class="title">
+                <div class="product__text">
+                    <div class="product__title">
                         {{coffees[currentCoffee()-1].name}}
                     </div>
-                    <div class="description">
+                    <div class="product__description">
                         {{coffees[currentCoffee()-1].description}}
 
                     </div>
-                    <div class="price">
+                    <div class="product__price">
                         {{coffees[currentCoffee()-1].price}}
 
                     </div>

@@ -5,13 +5,13 @@
           box-sizing: border-box;
 }
 
-body .container header {
+body .container .header {
   position: -webkit-sticky;
   position: sticky;
   top: 0;
 }
 
-body .container header h1 {
+body .container .header .header__title {
   padding: 15px 0;
   font-size: 3rem;
   background: #b38866;
@@ -26,37 +26,37 @@ body .container header h1 {
           transition-duration: 0s;
 }
 
-body .container header h1 a {
+body .container .header .header__title .header__link {
   color: black;
   text-decoration: none;
 }
 
-body .container .scrollHeader h1 {
+body .container .scrollHeader .header__title {
   font-size: 2rem;
 }
 
-body .container main {
+body .container .main {
   font-family: 'Oswald', sans-serif;
 }
 
-body .container main .banner {
+body .container .main .banner {
   height: 30vw;
   background: rgba(0, 0, 0, 0.6);
 }
 
-body .container main .banner img {
+body .container .main .banner .banner_image {
   position: fixed;
   top: -5vw;
   width: 100vw;
   z-index: -10;
 }
 
-body .container main .content {
+body .container .main .content {
   background: #eee;
   min-height: 70vh;
 }
 
-body .container main .content .info {
+body .container .main .content .content__info {
   margin: 0 20vw;
   padding: 30px 0;
   max-width: 1200px;
@@ -67,7 +67,7 @@ body .container main .content .info {
   row-gap: 40px;
 }
 
-body .container main .content .info .infoChild {
+body .container .main .content .content__info .info__child {
   padding: 2em 2.5em;
   border-radius: 1em;
   background: white;
@@ -81,7 +81,7 @@ body .container main .content .info .infoChild {
           column-gap: 50px;
 }
 
-body .container main .content .info .infoChild .infoText {
+body .container .main .content .content__info .info__child .info__text {
   width: 100%;
   text-align: center;
   display: -webkit-box;
@@ -99,12 +99,12 @@ body .container main .content .info .infoChild .infoText {
           flex-direction: column;
 }
 
-body .container main .content .info .infoChild .infoText .title {
+body .container .main .content .content__info .info__child .info__text .info__title {
   margin-bottom: 10px;
   font-size: 1.5rem;
 }
 
-body .container main .content .info .infoChild .infoPicture {
+body .container .main .content .content__info .info__child .info__picture {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -116,28 +116,28 @@ body .container main .content .info .infoChild .infoPicture {
           align-items: center;
 }
 
-body .container main .content .info .infoChild .infoPicture img {
+body .container .main .content .content__info .info__child .info__picture img {
   border-radius: 2px;
   max-height: 100%;
   max-width: 100%;
 }
 
-body .container main .content .products {
+body .container .main .content .products {
   padding: 30px 0;
   background: #ddbb95;
 }
 
-body .container main .content .products .title {
+body .container .main .content .products .products__title {
   margin-top: 40px;
   font-size: 2em;
   text-align: center;
 }
 
-body .container main .content .products .title:first-of-type {
+body .container .main .content .products .products__title:first-of-type {
   margin-top: 0;
 }
 
-body .container main .content .products .product {
+body .container .main .content .products .products__product {
   padding: 2em;
   margin: 0 10vw;
   margin-top: 15px;
@@ -154,7 +154,7 @@ body .container main .content .products .product {
           column-gap: 15px;
 }
 
-body .container main .content .products .product .text {
+body .container .main .content .products .products__product .product__text {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -165,19 +165,19 @@ body .container main .content .products .product .text {
           align-items: flex-start;
 }
 
-body .container main .content .products .product .text .title {
+body .container .main .content .products .products__product .product__text .product__title {
   font-size: 1.7em;
   margin-bottom: 10px;
 }
 
-body .container main .content .products .product .text .price {
+body .container .main .content .products .products__product .product__text .product__price {
   justify-self: flex-start;
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
 }
 
-body .container main .content .products .product .picture {
+body .container .main .content .products .products__product .product__picture {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -189,19 +189,19 @@ body .container main .content .products .product .picture {
           align-items: center;
 }
 
-body .container main .content .productsLists {
+body .container .main .content .productsLists {
   background: #eee;
 }
 
-body .container main .content .productsLists .productList {
+body .container .main .content .productsLists .productsLists__productList {
   padding: 1em;
 }
 
-body .container main .content .productsLists .productList .title {
+body .container .main .content .productsLists .productsLists__productList .productList__title {
   font-size: 2em;
 }
 
-body .container main .content .productsLists .productList ul {
+body .container .main .content .productsLists .productsLists__productList .productList__list {
   margin-left: 50px;
   overflow: auto;
   list-style-type: none;
@@ -218,7 +218,7 @@ body .container main .content .productsLists .productList ul {
   border-radius: 1em;
 }
 
-body .container main .content .productsLists .productList ul li {
+body .container .main .content .productsLists .productsLists__productList .productList__list .list_product {
   background: white;
   border-radius: 1em;
   padding: 1px;
@@ -226,7 +226,7 @@ body .container main .content .productsLists .productList ul li {
   max-width: 250px;
 }
 
-body .container main .content .productsLists .productList ul li .product {
+body .container .main .content .productsLists .productsLists__productList .productList__list .list_product .product__content {
   text-decoration: none;
   color: black;
   padding: 1em;
@@ -240,7 +240,7 @@ body .container main .content .productsLists .productList ul li .product {
       grid-template-columns: 100%;
 }
 
-body .container main .content .productsLists .productList ul li .product .image {
+body .container .main .content .productsLists .productsLists__productList .productList__list .list_product .product__content .product__image {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -253,30 +253,30 @@ body .container main .content .productsLists .productList ul li .product .image 
   width: 100%;
 }
 
-body .container main .content .productsLists .productList ul li .product .image img {
+body .container .main .content .productsLists .productsLists__productList .productList__list .list_product .product__content .product__image img {
   max-height: 100%;
   max-width: 100%;
 }
 
-body .container main .content .productsLists .productList ul li .product .title {
+body .container .main .content .productsLists .productsLists__productList .productList__list .list_product .product__content .product__title {
   font-size: 1.2em;
 }
 
-body .container main .content .productsLists .productList ul li .product .price {
+body .container .main .content .productsLists .productsLists__productList .productList__list .list_product .product__content .product__price {
   font-size: 1em;
 }
 
-body .container main .content .productsLists .productList ul li + li {
+body .container .main .content .productsLists .productsLists__productList .productList__list .list_product + .list_product {
   margin-left: 15px;
 }
 
-body .container main .content .productsLists .productList ::-webkit-scrollbar {
+body .container .main .content .productsLists .productsLists__productList ::-webkit-scrollbar {
   width: 0px;
   height: 0;
   background: transparent;
 }
 
-body .container footer {
+body .container .footer {
   font-family: 'Oswald', sans-serif;
   background: #626d71;
   display: -ms-grid;
@@ -287,7 +287,7 @@ body .container footer {
       grid-template-rows: 200px;
 }
 
-body .container footer p {
+body .container .footer .footer_content {
   -ms-grid-row: 1;
   -ms-grid-row-span: 1;
   -ms-grid-column: 2;
@@ -306,7 +306,7 @@ body .container footer p {
   font-size: .8em;
 }
 
-body .container footer .media {
+body .container .footer .footer__media {
   -ms-grid-row: 1;
   -ms-grid-row-span: 1;
   -ms-grid-column: 2;
